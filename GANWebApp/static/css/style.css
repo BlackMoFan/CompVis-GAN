@@ -1,0 +1,332 @@
+h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 2rem;
+}
+
+* {
+    color: #fff;
+}
+
+body {
+    font-family: 'Helvetica';
+    margin-left: 9rem;
+    background-color: #1E1E1E;
+    background-image: url('../assets/BG.png');
+    background-size: cover;
+}
+
+main {
+    margin: 3rem auto;
+    /* background-color: transparent; */
+}
+
+.left-grid {
+    margin: auto 0;
+}
+
+/* FOR LAYOUTING */
+div {
+    /* background-color: transparent; */
+    /* border: 1px solid red; */
+}
+
+#front-image {
+    height: 743px;
+    width: 558px;
+    background-size: auto;
+}
+
+.row small {
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.row > div > h1 {
+    font-size: 76px;
+    margin: 0;
+}
+
+.apply-gradient {
+    background: linear-gradient(45deg, #e65612, #de4ca2, #d646ef, #9746ea, #5248e7);
+    -webkit-background-clip: text; /* Clip the text to the background shape */
+    color: transparent;
+    display: inline-block; /* Ensure that the background gradient covers the entire text */
+}
+
+.rounded-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.btn-see-paper {
+    border: 1px solid #fff;
+    padding: 18px 32px;
+    background-color: transparent;
+    width: 178px;
+}
+
+.btn-start-creating {
+    background: linear-gradient(45deg, #e65612, #de4ca2, #d646ef, #9746ea, #5248e7);
+    color: #fff;
+    padding: 20px 60px 20px 80px;
+    margin-left: 10px;
+    border: none;
+    width: 331px;
+    text-decoration: none;
+}
+
+.btn-start-creating:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* MODAL */
+.modal-window {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.50);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    &:target {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    & > div {
+        width: 840px;
+        height: 597.33px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2em;
+        background: #202427;
+        border-radius: 24px;
+        font-size: 24px;
+    }
+
+    header {
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 150%;
+        margin: 0 0 15px;
+    }
+
+    .modal-bottom {
+        position: absolute;
+        bottom: 4rem;
+        left: 4rem;
+    }
+
+}
+
+.btn-cancel {
+    border: 1px solid #fff;
+    padding: 16px 90px;
+    background-color: transparent;
+    width: 246px;
+    height: 55px;
+    color: #fff;
+}
+
+.btn-cancel:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-generate {
+    background: linear-gradient(45deg, #e65612, #de4ca2, #d646ef, #9746ea, #5248e7);
+    color: #fff;
+    padding: 16px 150px 16px 160px;
+    margin-left: 275px;
+    border: none;
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: flex;
+    align-items: center; /* Center vertically */
+    width: 481px;
+    height: 56px;
+    text-decoration: none;
+}
+
+.btn-generate:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-generate svg {
+    margin-left: 10px;
+}
+
+/* Form */
+form {
+    margin: 2rem 0 0 10rem;
+    width: 100%;
+}
+
+.checkboxes {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxes__row {
+    display: flex;
+}
+
+.checkboxes__item {
+    padding: 15px;
+    width: 50%;
+}
+
+.checkbox.style-c {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox.style-c input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox.style-c input:checked ~ .checkbox__checkmark {
+    background: linear-gradient(45deg, #e65612, #de4ca2, #d646ef, #9746ea, #5248e7);
+}
+
+.checkbox.style-c input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+}
+
+.checkbox.style-c:hover input ~ .checkbox__checkmark {
+    background-color: transparent;
+}
+
+.checkbox.style-c:hover input:checked ~ .checkbox__checkmark {
+    background: linear-gradient(45deg, #e65612, #de4ca2, #d646ef, #9746ea, #5248e7);
+}
+
+.checkbox.style-c .checkbox__checkmark {
+    position: absolute;
+    top: 1px;
+    left: -20px;
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+    border: solid #363636;
+    transition: background-color 0.25s ease;
+    border-radius: 4px;
+    color: #363636;
+    content: '';
+}
+
+.checkbox.style-c .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    font-weight: 700;
+    width: 5px;
+    height: 15px;
+    border: solid #363636;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.checkbox.style-c .checkbox__body {
+    color: #fff;
+    line-height: 36.8px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* RESULTS */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #202427;
+    color: #fff;
+    width: 729px;
+    height: 814px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+
+    /* &__content {
+        display: flex;
+        flex-direction: row;
+    } */
+
+    h3 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    &__btn {
+        border: none;
+        outline: none;
+        color: #fff;
+        /* background-color: #bea8da; */
+        margin-top: 2rem;
+        padding: 0.8rem 1.6rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+}
+
+.card .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .content h3 {
+    margin: 0 auto;
+}
+
+.card .card_button {
+    position: absolute;
+    bottom: 2rem;
+    width: 535px;
+    height: 56px;
+    background: linear-gradient(45deg, #e65612, #de4ca2, #d646ef, #9746ea, #5248e7);
+    color: #fff;
+    text-decoration: none;
+}
+
+img#resultGAN {
+    margin: 1rem auto;
+}

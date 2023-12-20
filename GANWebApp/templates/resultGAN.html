@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <!-- <svg width="34" height="30" viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.5 27.5L2 15M2 15L14.5 2.5M2 15H32" stroke="#929292" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> -->
+                        
+                    <h3>RESULTS</h3>
+                    <!-- <p>This card doesn't have much content.</p> -->
+                </div>
+
+                <div>
+
+                    <img id="resultGAN" src="data:image/png;base64,{{ resultGAN }}" alt="Generated Face">
+                </div>
+
+                <div class="content">
+                    <a class="card_button rounded-button" href="{{ url_for('index')}}">
+                        Let's generate again  
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 14.0236C0.809969 13.9859 1.49533 13.6716 2.05608 13.0807C2.61682 12.4898 2.90343 11.7858 2.90343 10.9686C2.90343 11.7858 3.17757 12.4898 3.73832 13.0807C4.29907 13.6716 4.98443 13.9859 5.79439 14.0236C4.98443 14.0613 4.29907 14.3756 3.73832 14.9665C3.17757 15.5574 2.90343 16.2614 2.90343 17.0786C2.90343 16.2614 2.62928 15.5574 2.05608 14.9665C1.49533 14.3756 0.809969 14.0613 0 14.0236ZM2.90343 4.97171C4.47352 4.89628 5.80685 4.28025 6.90343 3.12363C8 1.967 8.54829 0.596648 8.54829 -1C8.54829 0.596648 9.09657 1.967 10.1931 3.12363C11.2897 4.28025 12.6231 4.88371 14.2056 4.97171C13.1713 5.022 12.2243 5.31116 11.352 5.86433C10.4922 6.40492 9.80685 7.1341 9.29595 8.03929C8.79751 8.94447 8.54829 9.91252 8.54829 10.9686C8.54829 9.37192 8 7.989 6.90343 6.83237C5.80685 5.66317 4.47352 5.04714 2.90343 4.97171ZM7.0405 18.5118C8.2243 18.4615 9.23365 17.9963 10.0561 17.1289C10.8785 16.2614 11.2897 15.2305 11.2897 14.0236C11.2897 15.2305 11.7009 16.2614 12.5234 17.1289C13.3458 17.9963 14.3427 18.4615 15.5265 18.5118C14.3427 18.5621 13.3458 19.0272 12.5234 19.8947C11.7009 20.7622 11.2897 21.7931 11.2897 23C11.2897 21.7931 10.8785 20.7622 10.0561 19.8947C9.22118 19.0272 8.2243 18.5746 7.0405 18.5118ZM15.5265 12.5526C16.7103 12.5024 17.7072 12.0372 18.5296 11.1697C19.352 10.3023 19.7508 9.27135 19.7508 8.05186C19.7508 9.25877 20.162 10.2897 20.9844 11.1572C21.8069 12.0246 22.8162 12.4898 24 12.5401C22.8162 12.5904 21.8069 13.0555 20.9844 13.923C20.162 14.7905 19.7508 15.8214 19.7508 17.0283C19.7508 15.8214 19.3396 14.7905 18.5296 13.923C17.7072 13.0681 16.7103 12.6029 15.5265 12.5526Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
